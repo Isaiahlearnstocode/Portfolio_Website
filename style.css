@@ -1,0 +1,23 @@
+/*Element Selector */
+p{
+    color:red
+}
+h3{
+    color:green
+}
+
+/*Class selector */
+.about-list-item {
+    font-style: italic;
+}
+
+/*ID selectors */
+#my-name{
+    color: aqua;
+}
+
+.grid-table{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
