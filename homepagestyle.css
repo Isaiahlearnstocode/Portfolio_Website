@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/*This is for the style of the header */
+.header{
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+}
+
+/*This is for the style of the inner header */
+.inner-header{
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: #001f3f;
+    float: middle;
+}
+
+.logo-container{
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo-container h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.navigation{
+    float: right;
+    height: 100%;
+}
+
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+}
+
+
+/*Edits the font family for the entire body */
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background: #caebf2;
+    color: #001f3f;
+}
+
+/*Edits the font family for texts that start with these identifiers */
+h1, h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif; 
+}
+
+/*Element Selector */
+.container{
+    /*Can't exceed 840 pixels */
+    max-width: 840px;
+    /* Gives equal margins on both sides so everything is centered */ 
+    margin: 0 auto;
+}
+
+/*This selects all the children that are inside the container which are divs */
+.container > div{
+    margin: 20px auto;
+}
+
+.intro{
+    text-align: center;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.i-am, .i-like {
+    text-align: center;
+}
+.about-list{
+    list-style: none;
+}
+
+/*Anything that has less than 480px will run this code */
+@media (max-width: 480px){
+    .about-grid{
+        grid-template-columns: 100%;
+    }
+}
+ 
+/*Class selector */
+.about-list-item {
+    font-style: italic;
+}
+ 
+/*ID selectors */
+#my-name{
+    color: #001f3f;
+}
+ 
+/* May need to be removed*/
+.grid-table{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 600px){
+    .grid-table{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+}
+
+.projects-heading{
+    text-align: center;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/*Made the image wrapper position to relative to not be below the image but on it and float so (Realitive here)*/
+.project-image-wrapper{
+    justify-self: center;
+    padding: 4%;
+    position: relative;
+}
+
+.project-image{
+    border-radius: 5px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease in-out .2s;
+}
+
+.project-image:hover {
+    filter: brightness(.75);
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+/*Makes text visible by hovering*/
+.project-image-wrapper:hover > h4 {
+    visibility: visible;
+}
+
+/*You use an absolute on an element inside of a position relative, (Absolute) use properties top, left, right in order to position it exactly where we want it on the image*/
+.project-image-wrapper > h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /*Makes the text invisible by default */
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+} 
+
+@media (max-width: 650px) {
+    .projects-grid{
+        grid-template-columns: 100%;
+    }
+}
+
+.links-and-contact{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.links{
+    justify-self: center;
+}
+
+.links-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (max-width: 650px) {
+    .links-and-contact{
+        grid-template-columns: 100%;
+    }
+}
+
+.profile-picture{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 6px 0 rgb(34, 60, 80, 0.16);
+    transition: all ease-in-out .2s;
+}
+
+/*This is a selector that only happens when a action is performed like hovering over the profile picture in this case */
+.profile-picture:hover{
+    box-shadow: 0 8px 12px 0 rgb(34, 60, 80, 0.16)
+}
+
+form input, textarea {
+    padding: 5px;
+    border-radius: 5px;
+    width: 240px;
+}
+
+/*To select the input button you select the input but only the one with the type sumbit*/
+form input[type="submit"] {
+    width: 250px;
+}
+
+.submit-button-wrapper{
+    margin: 20px 0;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}

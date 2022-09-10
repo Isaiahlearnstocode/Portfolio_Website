@@ -3,72 +3,127 @@
   <head>
     <!--Name for the tab itself-->
     <title>My Portfolio</title>
-    
+   
     <!--How to link css page to html-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepagestyle.css">
+    <!--For the website to fit on all devices (phones,laptops,computers etc.)-->
+    <meta name="viewport" content="width=display-width, initial-scale=1">
+    <!--This is to import the font you want to use Google Fonts is a good place to look-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
   </head>
-  
+ 
   <body>
-    <div>
-        <img src=""/>
-        <h1 id="my-name">Isaiah Majeed</h1>
-        <h3>Web Developer</h3>
-        <p>Working towards my dreams</p>
+    <!--This is for the header for the website-->
+    <div class="header">
+        <div class="inner-header">
+            <div class="logo-container">
+                <h1>My Portfolio website</h1>
+            </div>
+            <ul class="navigation">
+                <a><li>About Me</li></a>
+                <a><li>Experience</li></a>
+                <a><li>Projects</li></a>
+                <a><li>Contact</li></a>
+                
+            </ul>
+        </div>
     </div>
 
-    <div>
-        <h1>I am</h1>
-        <ul>
-            <!--class is to classify different parts of the code-->
-            <li class="about-list-item">An Web Developer</li>
-            <li class="about-list-item">An reader</li>
-            <li class="about-list-item">Gamer</li>
-        </ul>
-    </div>
-    <div>
-        <h1>I like to</h1>
-        <ul>
-            <li class="about-list-item">Player video games</li>
-            <li class="about-list-item">Read books</li>
-            <li class="about-list-item">Improve my coding skills</li>
-        </ul>
-
-    </div>
-    <div>
-        <h3>My Projects so far</h3>
-        <img src="https://via.placeholder.com/300"/>
-  <img src="https://via.placeholder.com/300"/>
-  <img src="https://via.placeholder.com/300"/>
-  <img src="https://via.placeholder.com/300"/>
-    </div>
-
-    <div>
-        <h3>Links</h3>
-        <ul>
-            <li>
-                <a href=""></a>
-            </li>
-            <li>
-                <a href=""></a>
-            </li>
-            <li>
-                <a href=""></a>
-            </li>
-        </ul>
-
-    </div>
+    <div class="container">
+        <div class="intro">
+            <img class="profile-picture"src="Images/profile-picture.jpg"/>
+            <h1 id="my-name">Isaiah Majeed</h1>
+            <h3>Web Developer</h3>
+            <p>Working towards my dreams</p>
+        </div>
     
-    <div>
-        <form>
-            <label for ="mail">
-                Email: <input id="email" placeholder="Enter your email"/>
-            </label>
-            <label for ="message">
-                Message: <textarea id="message">Your Message</textarea>
-            </label>
-            <input type="submit" value="Send Message">
-        </form>
-    </div>
-  </body>
+        <!--Makes a horizontal line -->
+        <hr/>
 
+        <div class="about-grid">
+            <div class="i-am">
+                <h3>I am</h3>
+                <ul class="about-list">
+                    <!--class is to classify different parts of the code-->
+                    <li class="about-list-item">An Web Developer</li>
+                    <li class="about-list-item">An reader</li>
+                    <li class="about-list-item">Gamer</li>
+            
+                </ul>
+            </div>
+        
+            <div class="i-like">
+                <h3>I like to</h3>
+                <ul class="about-list">
+                    <li class="about-list-item">Player video games</li>
+                    <li class="about-list-item">Read books</li>
+                    <li class="about-list-item">Improve my coding skills</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div>
+            <h3 class="projects-heading">My Projects so far</h3>
+            <div class="projects-grid">
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="Images/project-1.jpg"/>
+                    <h4>Project 1</h4>
+                </div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="Images/project-2.jpg"/>
+                    <h4>Project 2</h4>
+                </div>
+                <div class="project-image-wrapper">    
+                    <img class="project-image" src="Images/project-3.jpg"/>
+                    <h4>Project 3</h4>
+                </div>
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="Images/project-4.jpg"/>
+                    <h4>Project 4</h4>
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+        
+        <div class="links-and-contact">
+            <div class="links">
+                <h3>Links</h3>
+                <ul class="links-list">
+                    <li>
+                        <a href="https://github.com/Isaiahlearnstocode">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/isaiah-majeed-a04455240/">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+        
+            </div>
+            
+            <div>
+                <form action = "#">
+                    <label for ="email">
+                        <h4>Email</h4>
+                        <input type = "email" id="email" placeholder="Enter your email"/>
+                    </label>
+                    <label for ="message">
+                        <h4>Message</h4>
+                        <textarea id="message">Your Message</textarea>
+                    </label>
+                    <div class="submit-button-wrapper">
+                        <input id="submit-button" type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="homepagescript.js"></script>
+  </body>
+ 
 </html>
