@@ -1,53 +1,29 @@
-// selecting html elements
-// The #email is a css id selector that we are using in javascript
-// Word before element is the name of the element in the javascript format
 
-//let emailElement = document.querySelector('#email');
-//let messageElement = document.querySelector('#message')
-//let submitButton = document.querySelector('#submit-button');
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
-// attaching click listener to a button
-// sumbitButton.addEventListener('click', function(event){
-    // event.preventDefault();
+toggleButton.addEventListener('click', () =>{
+  navbarLinks.classList.toggle('active')
+})
 
-    // Gets the values of the email and message that the user input
-    // let emailValue = emailElement.value;
-    // let messageValue = messageElement.value;    
-    // This prints the value of the email that the user input, the 'Email: ' before emailValue makes this data show up in the console
-    // console.log('Email: ', emailValue)
-    // This prints the value of the email thet the user input, the 'Message: ' before messageValue makes this data show up in the console
-    // console.log('Message ', messageValue)
-// getting user entered values
-// javascript validations
 
-// Checks if the email the user input is valid or not
-function emailValidate(email) {
-    if(email.includes('@')) {
-      return true;
-    }
-    else {
-      return false;
-    }
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  
-// When the button is clicked  
-function clickListener(event) {
-    // Prevent what happens at default
-    event.preventDefault();
-    // Takes the value input by the user
-    let emailInput = document.querySelector('#email');
-    let messageInput = document.querySelector('#message');
-  
-    let emailText = emailInput.value;
-    let messageText = messageInput.value;
-  
-    if(emailValidate(emailText) !== true) {
-      console.log('The email address must contain @');
-      return false;
-    }
-    console.log('Thanks for your message');
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  
-  let submitButton = document.querySelector('#submit-button');
-  
-  submitButton.addEventListener('click', clickListener);
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}

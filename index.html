@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    
+    
     <!--Name for the tab itself-->
     <title>My Portfolio</title>
    
@@ -10,60 +12,145 @@
     <meta name="viewport" content="width=display-width, initial-scale=1">
     <!--This is to import the font you want to use Google Fonts is a good place to look-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="homepagescript.js" defer></script>
 
   </head>
  
   <body>
-    <!--This is for the header for the website-->
-    <div class="header">
-        <div class="inner-header">
-            <div class="logo-container">
-                <h1>My Portfolio website</h1>
-            </div>
-            <ul class="navigation">
-                <a><li>About Me</li></a>
-                <a><li>Experience</li></a>
-                <a><li>Projects</li></a>
-                <a><li>Contact</li></a>
-                
+   <nav class="navbar">
+        <div class="brand-title">Isaiah Majeed</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#"><span id="number-in-heading">01.</span> About</a></li>
+                <li><a href="#"><span id="number-in-heading">02.</span> Experience</a></li>
+                <li><a href="#"><span id="number-in-heading">03.</span> Projects</a></li>
+                <li><a href="#"><span id="number-in-heading">04.</span> Contact</a></li>
+            </ul>
+        </div>
+            
+        </div>
+
+   </nav>
+    
+    
+    <!--Makes space between Navbar and About Me-->
+    <div class="Space-in-between">
+
+    </div>
+    
+    
+    <h2 class="number-heading">
+        <span id="number-in-heading">01.</span> About Me 
+    </h2>
+
+    <div class="About-Me-Container">
+        <div class="profile-pictures-box">
+            <img class="profile-picture"src="C:\Users\Isaia\OneDrive\Desktop\Python Projects\Portfolio Website\Images\my-profile-picture.jpg"/>
+        </div>
+        <div class="About-Me-Container-text">
+            <p>Hello! My name is Isaiah and I enjoy making coding projects and solving problems that I believe that I can fix. My first coding class was back in middle school where we were taught the basics of HTML and CSS. Ever since then I knew that this would be something that I would want to be doing for the rest of my life.</p>
+            <p>Since that time has passed, I have now enrolled at Harrisburg University of Science and Technology where I plan to graduate. This degree will come with a <a class="in-text-links" href = "https://www.abet.org/about-abet/ ">ABET Accreditation </a> as well. I am currently working on serval projects but, my main focus is to continue to learn about data structures. </p>
+            <p>Here my skills that I've learned so far:</p>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </div>
+       
+        
+    </div>
+
+    <!--Makes space between About Me and Experience-->
+    <div class="Space-in-between">
+
+    </div>
+
+    
+    <h2 class="number-heading">
+        <span id="number-in-heading">02.</span> Experience
+    </h2>
+    
+    <div class="Experience-Container">
+        <!--This class is to make the tabs on the left of the tab-->
+        <div class="tab">
+            <!--This makes it so that when you hover of the buttons on the left of the table-->
+            <button class="tablinks" onmouseover="openCity(event, 'Assistant-Director')">Assistant Director</button>
+            <button class="tablinks" onmouseover="openCity(event, 'Assistant-Coach')">Assistant Coach</button>
+            <button class="tablinks" onmouseover="openCity(event, 'SACC-Counselor')">SACC Counselor</button>
+            <button class="tablinks" onmouseover="openCity(event, 'Junior-Camp-Counselor')">Junior Camp Counselor</button>
+        </div>
+
+        <!--This is for the content inside of the right of the table-->
+        <div id="Assistant-Director" class="tabcontent">
+            <!--This is the Expereience title-->
+            <h3 class="Experience-title">Assistant Director <span id="number-in-heading">@ NJCare</span></h3>
+            <!--This is the amount of Experience at that job-->
+            <p class="Experience-time">June - August 2021</p>
+            <!--These are the bulletpoints for what I did at the job-->
+            <ul class="Experience-bulletpoints">
+                <li>Assisted Camp Director in staff training planning</li>
+                <li>Provided guidance support and evaluation to head counselors</li>
+                <li>Supervised ordering and purchase of camp supplies and equipment</li>
+                <li>Coordinated with Program and Camp Directors in matters of mutual responsibility</li>
+            </ul>
+        </div>
+
+        <div id="Assistant-Coach" class="tabcontent">
+            <h3 class="Experience-title">Assistant Coach <span id="number-in-heading">@ Metro YMCA of the Oranges</span></h3>
+            <p class="Experience-time">October 2019 - March 2020</p>
+            <ul class="Experience-bulletpoints">
+                <li>Assisted head coach with daily duties</li>
+                <li>Developed each basketball players' skills</li>
+                <li>Conducted and supervised team practices and training sessions</li>
+                <li>Led and demonstrated daily skill development workouts during practice</li>
+            </ul> 
+        </div>
+
+        <div id="SACC-Counselor" class="tabcontent">
+            <h3 class="Experience-title">SACC Counselor <span id="number-in-heading">@ Metro YMCA of the Oranges</span></h3>
+            <p class="Experience-time">October 2019 - March 2020</p>
+            <ul class="Experience-bulletpoints">
+                <li>Managed the health, safety and well being of children in the program by providing close supervision
+                    of all activities</li>
+                <li>Supervised 24+ children at any given time</li>
+                <li>Participated in, and administered recreational activities for children</li>
+                <li>Maintained accurate program documentation such as incident/accident reports, attendance, and signin / sign-out she</li>
+            </ul>
+        </div>
+
+        <div id="Junior-Camp-Counselor" class="tabcontent">
+            <h3 class="Experience-title">Junior Camp Counselor <span id="number-in-heading">@ Metro YMCA of the Oranges</span></h3>
+            <p class="Experience-time">June - August 2021</p>
+            <ul class="Experience-bulletpoints">
+                <li>Assisted Camp Director in staff training planning</li>
+                <li>Provided guidance support and evaluation to head counselors</li>
+                <li>Supervised ordering and purchase of camp supplies and equipment</li>
+                <li>Coordinated with Program and Camp Directors in matters of mutual responsibility</li>
             </ul>
         </div>
     </div>
-
+    <div class="clearfix"></div>
+    
+    
+    
+    
+    
+    
+    
     <div class="container">
         <div class="intro">
-            <img class="profile-picture"src="Images/profile-picture.jpg"/>
-            <h1 id="my-name">Isaiah Majeed</h1>
-            <h3>Web Developer</h3>
-            <p>Working towards my dreams</p>
-        </div>
-    
-        <!--Makes a horizontal line -->
-        <hr/>
-
-        <div class="about-grid">
-            <div class="i-am">
-                <h3>I am</h3>
-                <ul class="about-list">
-                    <!--class is to classify different parts of the code-->
-                    <li class="about-list-item">An Web Developer</li>
-                    <li class="about-list-item">An reader</li>
-                    <li class="about-list-item">Gamer</li>
             
-                </ul>
-            </div>
-        
-            <div class="i-like">
-                <h3>I like to</h3>
-                <ul class="about-list">
-                    <li class="about-list-item">Player video games</li>
-                    <li class="about-list-item">Read books</li>
-                    <li class="about-list-item">Improve my coding skills</li>
-                </ul>
-            </div>
+            
         </div>
 
-        <hr/>
+       
 
         <div>
             <h3 class="projects-heading">My Projects so far</h3>
@@ -106,24 +193,13 @@
         
             </div>
             
-            <div>
-                <form action = "#">
-                    <label for ="email">
-                        <h4>Email</h4>
-                        <input type = "email" id="email" placeholder="Enter your email"/>
-                    </label>
-                    <label for ="message">
-                        <h4>Message</h4>
-                        <textarea id="message">Your Message</textarea>
-                    </label>
-                    <div class="submit-button-wrapper">
-                        <input id="submit-button" type="submit" value="Send Message">
-                    </div>
-                </form>
-            </div>
+            
         </div>
     </div>
-    <script src="homepagescript.js"></script>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.</p>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. A Latin professor at Hampden-Sydney College in Virginia discovered the source.</p>
+    <p>Lorem Ipsum comes from "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p>
   </body>
  
 </html>
